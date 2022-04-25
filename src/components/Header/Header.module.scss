@@ -1,9 +1,21 @@
 .header {
   margin-bottom: 30px;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   .title {
     font-size: 38px;
     font-weight: 600;
     letter-spacing: 10px;
     color: white;
+  }
+  .themeImage {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    img {
+      width: 100%;
+    }
   }
 }

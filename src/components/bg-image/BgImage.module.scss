@@ -3,6 +3,7 @@
 .bgImage {
   height: 100%;
   .blackBg {
+    transition: 0.2s ease-in-out;
     min-height: calc(100vh - 250px);
     max-height: 100%;
     .content {
