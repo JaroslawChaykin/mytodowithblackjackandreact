@@ -1,0 +1,37 @@
+.footerFilter {
+  background: #25273c;
+  padding: 6px 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #41435b;
+  font-size: 14px;
+
+  button {
+    background: none;
+    border: none;
+    color: #41435b;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px;
+    &:hover {
+      background: rgb(35, 38, 58);
+      border-radius: 4px;
+    }
+    &.active {
+      color: #4268bc;
+    }
+  }
+
+  .todoLeft {
+
+  }
+
+  .filterList {
+    display: flex;
+    gap: 10px;
+  }
+
+  .clear {
+
+  }
+}

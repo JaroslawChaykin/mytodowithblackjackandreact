@@ -1,0 +1,16 @@
+.themeBlack {
+  .blackBg {
+    background: #181824;
+  }
+  .image:after {
+    background: linear-gradient(to right, #371f9b, #751969);
+  }
+}
+.themeWhite {
+  .blackBg {
+    background: white;
+  }
+  .image:after {
+    background: linear-gradient(to left, #371f9b, #751969);
+  }
+}

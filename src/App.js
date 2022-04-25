@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import TodoList from './components/todoList/TodoList';
+import BgImage from './components/bg-image/BgImage';
+import TodoCreatedForm from './components/todoCreatedForm/TodoCreatedForm';
+import Header from './components/Header/Header';
+import FooterFilter from './components/footerFilter/FooterFilter';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+      <div>
+          <BgImage>
+              <div className="todoBox">
+                  <div className="todoEntries">
+                      <Header/>
+                      <TodoCreatedForm/>
+                      <TodoList/>
+                  </div>
+              </div>
+          </BgImage>
+      </div>
+    );
 }
 
 export default App;
