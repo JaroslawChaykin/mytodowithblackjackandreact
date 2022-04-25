@@ -1,7 +1,7 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import classes from './BgImage.module.scss';
 import bg from '../../assets/images/bg.webp'
-import { useSelector } from 'react-redux';
 
 const BgImage = ({children}) => {
 

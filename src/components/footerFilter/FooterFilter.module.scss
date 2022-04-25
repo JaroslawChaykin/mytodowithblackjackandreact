@@ -1,15 +1,13 @@
+@import "theme";
 .footerFilter {
-  background: #25273c;
   padding: 6px 20px;
   display: flex;
   justify-content: space-between;
-  color: #41435b;
   font-size: 14px;
 
   button {
     background: none;
     border: none;
-    color: #41435b;
     cursor: pointer;
     font-size: 14px;
     padding: 4px;

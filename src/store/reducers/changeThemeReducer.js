@@ -1,6 +1,6 @@
 const CHANGE_THEME = "CHANGE_THEME";
 
-export const changeThemeReducer = (state = 'black', action) => {
+export const changeThemeReducer = (state = 'white', action) => {
     switch (action.type) {
         case CHANGE_THEME:
             return state === 'black' ? 'white' : 'black'

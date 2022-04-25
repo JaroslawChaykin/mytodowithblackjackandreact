@@ -4,11 +4,11 @@ import FooterFilter from '../footerFilter/FooterFilter';
 import classes from './todoList.module.scss';
 
 const TodoList = () => {
-
+    const theme = useSelector(state => state.theme)
     const todos = useSelector(state => state.todo.todos);
 
     return (
-      <div className={classes.todoList}>
+      <div className={`${classes.todoList} ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
           {todos.map((item) => (
             <TodoItem key={item.id} todo={item}/>
           ))}

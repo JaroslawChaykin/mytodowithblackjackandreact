@@ -1,0 +1,20 @@
+.themeBlack.footerFilter {
+  background: #25273c;
+  color: #41435b;
+  button {
+    color: #41435b;
+    &:hover {
+      background: rgb(35, 38, 58);
+    }
+  }
+}
+.themeWhite.footerFilter {
+  background: #fff;
+  color: #b3b4b9;
+  button {
+    color: #b3b4b9;
+    &:hover {
+      background: rgb(246, 246, 246);
+    }
+  }
+}

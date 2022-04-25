@@ -1,0 +1,22 @@
+.themeBlack.item {
+  background: #25273c;
+  color: white;
+  border-bottom: 1px solid #2e3045;
+  &:hover {
+    background: rgb(35, 38, 58);
+  }
+  .checkBoxText {
+    border: 1px solid #2e3045;
+  }
+}
+.themeWhite.item {
+  background: #fff;
+  color: #25273c;
+  border-bottom: 1px solid #dcdcdc;
+  &:hover {
+    background: rgb(246, 246, 246);
+  }
+  .checkBoxText {
+    border: 1px solid #dcdcdc;
+  }
+}

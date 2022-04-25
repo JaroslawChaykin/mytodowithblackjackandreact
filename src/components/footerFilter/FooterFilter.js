@@ -4,13 +4,14 @@ import classes from './FooterFilter.module.scss'
 
 const FooterFilter = () => {
     const todos = useSelector(state => state.todo.todos);
+    const theme = useSelector(state => state.theme)
 
     if (!todos.length) {
-        return <div className={classes.footerFilter} style={{paddingLeft: '70px'}}>Empty</div>
+        return <div className={`${classes.footerFilter} ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`} style={{paddingLeft: '70px'}}>Empty</div>
     }
 
     return (
-      <div className={classes.footerFilter}>
+      <div className={`${classes.footerFilter} ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
         <div className={classes.todoLeft}>
             {backLogCounter(todos)} items left
         </div>
