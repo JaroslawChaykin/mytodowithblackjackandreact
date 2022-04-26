@@ -12,9 +12,7 @@ const FooterFilter = () => {
         return <div className={`${classes.footerFilter} ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}
                     style={{paddingLeft: '70px'}}>Empty</div>;
     }
-    const deleteAllCheckedTodo = () => {
-        dispatch(deleteAllCompletedTodoItem())
-    };
+    const deleteAllCheckedTodo = () => dispatch(deleteAllCompletedTodoItem());
 
     return (
       <div className={`${classes.footerFilter} ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
@@ -23,7 +21,7 @@ const FooterFilter = () => {
           </div>
           <div className={classes.filterList}>
               <button className={classes.active}>All</button>
-              <button>Archive</button>
+              <button>Active</button>
               <button>Completed</button>
           </div>
           <div className={classes.clear}>

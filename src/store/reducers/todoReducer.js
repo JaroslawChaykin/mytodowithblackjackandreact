@@ -45,5 +45,5 @@ export const todoReducer = (state = initialState, action) => {
 
 export const createTodoItem = (name) => ({type: ADD_TODO, payload: {name: name, id: Date.now(), checked: false}});
 export const deleteTodoItem = (id) => ({type: DELETE_TODO, payload: id});
-export const deleteAllCompletedTodoItem = (id) => ({type: DELETE_ALL_COMPLETED_TODO});
+export const deleteAllCompletedTodoItem = () => ({type: DELETE_ALL_COMPLETED_TODO});
 export const checkTodoItem = (id) => ({type: CHECK_TODO, payload: id});
