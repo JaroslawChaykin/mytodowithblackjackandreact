@@ -14,9 +14,7 @@ const FooterFilter = ({setQuery, query}) => {
                     style={{paddingLeft: '70px'}}>Empty</div>;
     }
 
-    const queryCreated = (event) => {
-        setQuery(event.target.innerText)
-    };
+    const queryCreated = (event) => setQuery(event.target.innerText);
 
     return (
       <div className={`${classes.footerFilter} ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
