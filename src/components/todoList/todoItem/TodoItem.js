@@ -4,27 +4,25 @@ import { memo } from 'react';
 import check from '../../../assets/images/check.svg'
 import classes from './TodoItem.module.scss';
 
-const TodoItem = memo(
-  ({todo}) => {
-      const dispatch = useDispatch();
-      const theme = useSelector(state => state.theme)
+const TodoItem = ({todo}) => {
+    const dispatch = useDispatch();
+    const theme = useSelector(state => state.theme)
 
-      const deleteTodo = (id) => dispatch(deleteTodoItem(id));
-      const checkTodo = (id) => dispatch(checkTodoItem(id));
-      return (
-        <div className={`${classes.item } ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
-            <label className={classes.checkboxSecond}>
-                <input type="checkbox" checked={todo.checked} onChange={() => checkTodo(todo.id)}/>
-                <div className={classes.checkBoxText}>
-                    <img src={check} alt=""/>
-                </div>
-            </label>
-            <div className={classes.name} onDoubleClick={() => deleteTodo(todo.id)}>
-                {todo.name}
-            </div>
-        </div>
-      );
-  }
-)
+    const deleteTodo = (id) => dispatch(deleteTodoItem(id));
+    const checkTodo = (id) => dispatch(checkTodoItem(id));
+    return (
+      <div className={`${classes.item } ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
+          <label className={classes.checkboxSecond}>
+              <input type="checkbox" checked={todo.checked} onChange={() => checkTodo(todo.id)}/>
+              <div className={classes.checkBoxText}>
+                  <img src={check} alt=""/>
+              </div>
+          </label>
+          <div className={classes.name} onDoubleClick={() => deleteTodo(todo.id)}>
+              {todo.name}
+          </div>
+      </div>
+    );
+}
 
-export default TodoItem;
+export default memo(TodoItem);
