@@ -1,5 +1,8 @@
 const initialState = {
-    todos: []
+    todos: [
+        {name: 'Hello', id: 1},
+        {name: 'Privet', id: 2}
+    ]
 };
 
 const ADD_TODO = 'ADD_TODO';

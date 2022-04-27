@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { checkTodoItem, deleteTodoItem } from '../../../store/reducers/todoReducer';
 import { memo } from 'react';
 import check from '../../../assets/images/check.svg'
+import { isPhone } from '../../../utils';
+import close from '../../../assets/images/close.svg'
 import classes from './TodoItem.module.scss';
 
 const TodoItem = ({todo}) => {
@@ -18,9 +20,14 @@ const TodoItem = ({todo}) => {
                   <img src={check} alt=""/>
               </div>
           </label>
-          <div className={classes.name} onDoubleClick={() => deleteTodo(todo.id)}>
+          <div className={`${classes.name} ${todo.checked ? classes.checked : ''}`}
+               onDoubleClick={() => deleteTodo(todo.id)}>
               {todo.name}
           </div>
+          <button className={`${classes.phone} ${isPhone ? classes.isPhone : ''}`}
+                  onClick={() => deleteTodo(todo.id)}>
+              <img src={close} alt=""/>
+          </button>
       </div>
     );
 }
