@@ -1,13 +1,11 @@
 import { useSelector } from 'react-redux';
 import TodoItem from './todoItem/TodoItem';
-import FooterFilter from '../footerFilter/FooterFilter';
 import classes from './todoList.module.scss';
-import { useState } from 'react';
 
 const TodoList = () => {
     const theme = useSelector(state => state.theme)
     const todos = useSelector(state => state.todo.todos);
-    const [query, setQuery] = useState('All');
+    const query = useSelector(state => state.todo.query);
 
     const sortedTodos = (query) => {
         switch (query) {
@@ -25,7 +23,6 @@ const TodoList = () => {
           {sortedTodos(query).map((item) => (
             <TodoItem key={item.id} todo={item}/>
           ))}
-          <FooterFilter setQuery={setQuery} query={query}/>
       </div>
     );
 };
