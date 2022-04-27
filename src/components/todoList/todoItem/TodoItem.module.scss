@@ -1,14 +1,33 @@
 @import 'theme';
 
 .item {
-  padding: 20px 10px 20px 70px;
+  padding: 0 10px 0 70px;
   font-weight: 200;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .phone {
+    display: none;
+    &.isPhone {
+      display: flex;
+      align-items: center;
+      width: 30px;
+      margin-right: 12.5px;
+      background: none;
+      border: none;
+    }
+  }
 
   .name {
     word-wrap: break-word;
+    padding: 20px 0;
+    &.checked {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
   }
 
   .checkboxSecond {
