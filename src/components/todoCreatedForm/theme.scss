@@ -1,4 +1,7 @@
 .themeBlack.form {
+  .createBtn {
+    border: 1px solid #2e3045;
+  }
   .input {
     background: #25273c;
     color: white;
@@ -11,6 +14,9 @@
 }
 
 .themeWhite.form {
+  .createBtn {
+    border: 1px solid #dcdcdc;
+  }
   .input {
     background: #fff;
     color: #25273c;

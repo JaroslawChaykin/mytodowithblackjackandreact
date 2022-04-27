@@ -2,6 +2,16 @@
 
 .form {
   margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  .createBtn {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    position: absolute;
+    left: 22.5px;
+  }
   .input {
     transition: 0.2s ease-in-out;
     padding: 20px 10px 20px 70px;

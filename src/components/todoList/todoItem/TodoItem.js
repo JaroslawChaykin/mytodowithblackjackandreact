@@ -21,7 +21,7 @@ const TodoItem = ({todo}) => {
               </div>
           </label>
           <div className={`${classes.name} ${todo.checked ? classes.checked : ''}`}
-               onDoubleClick={() => deleteTodo(todo.id)}>
+               onDoubleClick={() => !isPhone ? deleteTodo(todo.id) : ''}>
               {todo.name}
           </div>
           <button className={`${classes.phone} ${isPhone ? classes.isPhone : ''}`}

@@ -16,6 +16,7 @@ const TodoCreatedForm = () => {
     };
     return (
       <div className={`${classes.form}  ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
+          <div className={classes.createBtn} onClick={addTodo}></div>
           <input type="text" value={valueTitle}
                  onChange={(e) => setValueTitle(e.target.value)}
                  className={classes.input}
