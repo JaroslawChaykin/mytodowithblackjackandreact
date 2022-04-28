@@ -7,6 +7,7 @@ const TodoCreatedForm = () => {
     const [valueTitle, setValueTitle] = useState('');
     const theme = useSelector(state => state.theme)
     const dispatch = useDispatch();
+    const currentThemes = theme === 'black' ? classes.themeBlack : classes.themeWhite;
 
     const addTodo = () => {
         if(valueTitle) {
@@ -15,7 +16,7 @@ const TodoCreatedForm = () => {
         }
     };
     return (
-      <div className={`${classes.form}  ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
+      <div className={`${classes.form}  ${currentThemes}`}>
           <div className={classes.createBtn} onClick={addTodo}></div>
           <input type="text" value={valueTitle}
                  onChange={(e) => setValueTitle(e.target.value)}

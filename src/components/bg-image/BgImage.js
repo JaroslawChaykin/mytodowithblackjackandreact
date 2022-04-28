@@ -6,9 +6,10 @@ import bg from '../../assets/images/bg.webp'
 const BgImage = ({children}) => {
 
     const theme = useSelector(state => state.theme)
+    const currentThemes = theme === 'black' ? classes.themeBlack : classes.themeWhite;
 
     return (
-      <div className={`${classes.bgImage} ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
+      <div className={`${classes.bgImage} ${currentThemes}`}>
           <div className={classes.image}>
               <img src={bg} alt="bg"/>
           </div>

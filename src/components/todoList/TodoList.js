@@ -6,6 +6,7 @@ const TodoList = () => {
     const theme = useSelector(state => state.theme)
     const todos = useSelector(state => state.todo.todos);
     const query = useSelector(state => state.todo.query);
+    const currentThemes = theme === 'black' ? classes.themeBlack : classes.themeWhite;
 
     const sortedTodos = (query) => {
         switch (query) {
@@ -19,7 +20,7 @@ const TodoList = () => {
     }
 
     return (
-      <div className={`${classes.todoList} ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
+      <div className={`${classes.todoList} ${currentThemes}`}>
           {sortedTodos(query).map((item) => (
             <TodoItem key={item.id} todo={item}/>
           ))}

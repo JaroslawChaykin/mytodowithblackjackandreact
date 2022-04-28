@@ -9,11 +9,12 @@ import classes from './TodoItem.module.scss';
 const TodoItem = ({todo}) => {
     const dispatch = useDispatch();
     const theme = useSelector(state => state.theme)
+    const currentThemes = theme === 'black' ? classes.themeBlack : classes.themeWhite;
 
     const deleteTodo = (id) => dispatch(deleteTodoItem(id));
     const checkTodo = (id) => dispatch(checkTodoItem(id));
     return (
-      <div className={`${classes.item } ${theme === 'black' ? classes.themeBlack : classes.themeWhite}`}>
+      <div className={`${classes.item } ${currentThemes}`}>
           <label className={classes.checkboxSecond}>
               <input type="checkbox" checked={todo.checked} onChange={() => checkTodo(todo.id)}/>
               <div className={classes.checkBoxText}>
