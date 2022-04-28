@@ -16,29 +16,25 @@ const FooterFilter = () => {
         return <div className={`${classes.footerFilter} ${classes.br} ${currentThemes}`}
                     style={{paddingLeft: '70px'}}>Empty</div>;
     }
+    const buttonOfSelector = ['All', 'Active', 'Completed']
 
-    const componentToPhone = () => {
-        return (
-          <div className={classes.filterList}>
-              <button className={query === 'All' ? classes.active : ''}
-                      onClick={(e) => queryCreated(e)}>All
-              </button>
-              <button className={query === 'Active' ? classes.active : ''}
-                      onClick={(e) => queryCreated(e)}>Active
-              </button>
-              <button className={query === 'Completed' ? classes.active : ''}
-                      onClick={(e) => queryCreated(e)}>Completed
-              </button>
-          </div>
-        );
+    const componentSelectors = () => {
+        return buttonOfSelector.map(item => (
+            <button key={item} className={query === `${item}` ? classes.active : ''}
+                    onClick={(e) => queryCreated(e)}>{item}
+            </button>
+          ))
     };
+
     return (
       <div>
           <div className={`${classes.footerFilter} ${currentThemes}`}>
               <div className={classes.todoLeft}>
                   {backLogCounter(todos)} items left
               </div>
-              {!isPhone && componentToPhone()}
+              <div className={classes.filterList}>
+                  {!isPhone && componentSelectors()}
+              </div>
               <div className={classes.clear}>
                   <button onClick={deleteAllCheckedTodo}>Clear completed</button>
               </div>
@@ -46,7 +42,7 @@ const FooterFilter = () => {
           {
             isPhone &&
             <div className={`${classes.footerFilter} ${classes.footerFilterPhone} ${currentThemes}`}>
-                {componentToPhone()}
+                {componentSelectors()}
             </div>
           }
       </div>
