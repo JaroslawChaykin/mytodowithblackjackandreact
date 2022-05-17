@@ -4,9 +4,8 @@ import { backLogCounter, isPhone } from '../../utils';
 import classes from './FooterFilter.module.scss';
 
 const FooterFilter = () => {
-    const todos = useSelector(state => state.todo.todos);
+    const {todos, query} = useSelector(state => state.todo);
     const theme = useSelector(state => state.theme);
-    const query = useSelector(state => state.todo.query);
     const dispatch = useDispatch();
     const deleteAllCheckedTodo = () => dispatch(deleteAllCompletedTodoItem());
     const queryCreated = (event) => dispatch(changeQuery(event.target.innerText));
