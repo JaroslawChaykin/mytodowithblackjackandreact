@@ -1,9 +1,3 @@
-.todoBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-190px);
-}
 .todoEntries {
     height: 100%;
     width: 550px;

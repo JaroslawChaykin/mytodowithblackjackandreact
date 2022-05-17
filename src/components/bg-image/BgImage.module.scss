@@ -9,6 +9,10 @@
     .content {
       width: 100%;
       position: relative;
+      transform: translateY(-190px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   .image {

@@ -8,18 +8,14 @@ import FooterFilter from 'components/footerFilter/FooterFilter';
 function App() {
 
     return (
-      <div>
-          <BgImage>
-              <div className="todoBox">
-                  <div className="todoEntries">
-                      <Header/>
-                      <TodoCreatedForm/>
-                      <TodoList/>
-                      <FooterFilter/>
-                  </div>
-              </div>
-          </BgImage>
-      </div>
+      <BgImage>
+          <div className="todoEntries">
+              <Header/>
+              <TodoCreatedForm/>
+              <TodoList/>
+              <FooterFilter/>
+          </div>
+      </BgImage>
     );
 }
 
