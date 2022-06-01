@@ -4,8 +4,7 @@ import classes from './todoList.module.scss';
 
 const TodoList = () => {
     const theme = useSelector(state => state.theme)
-    const todos = useSelector(state => state.todo.todos);
-    const query = useSelector(state => state.todo.query);
+    const { todos, query } = useSelector(state => state.todo);
     const currentThemes = theme === 'black' ? classes.themeBlack : classes.themeWhite;
 
     const sortedTodos = (query) => {
