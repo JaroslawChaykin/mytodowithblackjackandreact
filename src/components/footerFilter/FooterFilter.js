@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { changeQuery, deleteAllCompletedTodoItem } from '../../store/reducers/todoReducer';
+import { changeQuery, deleteAllCompletedTodoItem } from '../../store/reducers/TodosReducer/Todos.reducer';
 import { backLogCounter, isPhone } from '../../utils';
 import classes from './FooterFilter.module.scss';
 

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { checkTodoItem, deleteTodoItem } from '../../../store/reducers/todoReducer';
+import { checkTodoItem, deleteTodoItem } from '../../../store/reducers/TodosReducer/Todos.reducer';
 import { memo } from 'react';
 import check from '../../../assets/images/check.svg'
 import { isPhone } from '../../../utils';

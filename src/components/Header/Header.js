@@ -1,5 +1,5 @@
 import classes from './Header.module.scss'
-import { changeTheme } from '../../store/reducers/changeThemeReducer';
+import { changeTheme } from '../../store/reducers/ThemeReducer/Theme.reducer';
 import { useDispatch, useSelector } from 'react-redux';
 import moon from '../../assets/images/moon.svg'
 import sun from '../../assets/images/sun.svg'

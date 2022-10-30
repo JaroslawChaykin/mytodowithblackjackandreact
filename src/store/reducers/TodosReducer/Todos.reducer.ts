@@ -1,15 +1,12 @@
-const initialState = {
+import {TodosStateType} from './Todos.types';
+import {ADD_TODO, CHANGE_QUERY, CHECK_TODO, DELETE_ALL_COMPLETED_TODO, DELETE_TODO} from './Todos.actions';
+
+const initialState: TodosStateType = {
     todos: [],
     query: 'All'
 };
 
-const ADD_TODO = 'ADD_TODO';
-const DELETE_TODO = 'DELETE_TODO';
-const DELETE_ALL_COMPLETED_TODO = 'DELETE_ALL_COMPLETED_TODO';
-const CHECK_TODO = 'CHECK_TODO';
-const CHANGE_QUERY = 'CHANGE_QUERY';
-
-export const todoReducer = (state = initialState, action) => {
+export const todosReducer = (state = initialState, action: any) => {
     switch (action.type) {
         case ADD_TODO:
             return {
@@ -49,9 +46,3 @@ export const todoReducer = (state = initialState, action) => {
             return state;
     }
 };
-
-export const createTodoItem = (name) => ({type: ADD_TODO, payload: {name: name, id: Date.now(), checked: false}});
-export const deleteTodoItem = (id) => ({type: DELETE_TODO, payload: id});
-export const deleteAllCompletedTodoItem = () => ({type: DELETE_ALL_COMPLETED_TODO});
-export const checkTodoItem = (id) => ({type: CHECK_TODO, payload: id});
-export const changeQuery = (query) => ({type: CHANGE_QUERY, payload: query});
