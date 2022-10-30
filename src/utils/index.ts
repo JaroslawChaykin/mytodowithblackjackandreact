@@ -1,4 +1,6 @@
-export const backLogCounter = (todos) => {
+import {TodoType} from '../store/reducers/TodosReducer/Todos.types';
+
+export const backLogCounter = (todos: TodoType[]) => {
     let i = 0
     todos.forEach(item => !item.checked && i++ )
     return i

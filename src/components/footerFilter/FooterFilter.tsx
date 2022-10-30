@@ -1,14 +1,15 @@
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeQuery, deleteAllCompletedTodoItem } from '../../store/reducers/TodosReducer/Todos.reducer';
 import { backLogCounter, isPhone } from '../../utils';
 import classes from './FooterFilter.module.scss';
+import {changeQuery, deleteAllCompletedTodoItem} from '../../store/reducers/TodosReducer/Todos.actions';
 
-const FooterFilter = () => {
+const FooterFilter: React.FC = () => {
     const {todos, query} = useSelector(state => state.todo);
     const theme = useSelector(state => state.theme);
     const dispatch = useDispatch();
     const deleteAllCheckedTodo = () => dispatch(deleteAllCompletedTodoItem());
-    const queryCreated = (event) => dispatch(changeQuery(event.target.innerText));
+    const queryCreated = (event: any) => dispatch(changeQuery(event.target.innerText));
     const currentThemes = theme === 'black' ? classes.themeBlack : classes.themeWhite;
 
     if (!todos.length) {

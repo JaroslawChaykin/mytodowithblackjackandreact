@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { checkTodoItem, deleteTodoItem } from '../../../store/reducers/TodosReducer/Todos.reducer';
-import { memo } from 'react';
+import React, { memo } from 'react';
 import check from '../../../assets/images/check.svg'
 import { isPhone } from '../../../utils';
 import close from '../../../assets/images/close.svg'
 import classes from './TodoItem.module.scss';
 
-const TodoItem = ({todo}) => {
+const TodoItem: React.FC = ({todo}) => {
     const dispatch = useDispatch();
     const theme = useSelector(state => state.theme)
     const currentThemes = theme === 'black' ? classes.themeBlack : classes.themeWhite;

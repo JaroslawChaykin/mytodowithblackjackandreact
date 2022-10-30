@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { createTodoItem } from '../../store/reducers/TodosReducer/Todos.reducer';
+import {createTodoItem} from '../../store/reducers/TodosReducer/Todos.actions';
 import classes from './TodoCreatedForm.module.scss'
 
-const TodoCreatedForm = () => {
+const TodoCreatedForm: React.FC = () => {
     const [valueTitle, setValueTitle] = useState('');
     const theme = useSelector(state => state.theme)
     const dispatch = useDispatch();

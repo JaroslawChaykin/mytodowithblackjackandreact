@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import classes from './BgImage.module.scss';
 import bg from '../../assets/images/bg.webp'
 
-const BgImage = ({children}) => {
+const BgImage: React.FC = ({children}) => {
 
     const theme = useSelector(state => state.theme)
     const currentThemes = theme === 'black' ? classes.themeBlack : classes.themeWhite;
